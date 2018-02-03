@@ -12,13 +12,10 @@ class EvenAndOdd extends Component{
 
     click(){
         if(this.state.userInput){
-            let arr = this.state.userInput.split(',');
-            arr = arr.map((val) => Number(val));
-            let evens = arr.filter((val) => val % 2 === 0);
-            let odds = arr.filter((val) => val % 2 > 0);
+            let arr = this.state.userInput.split(',').map((val) => Number(val));
             this.setState({
-                evenArray: evens,
-                oddArray: odds,
+                evenArray: arr.filter((val) => val % 2 === 0),
+                oddArray: arr.filter((val) => val % 2 > 0),
                 userInput: ""
             });
         }
