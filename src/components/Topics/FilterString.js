@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class FilterObject extends Component{
     render() {
-        return <p>FilterObject Component</p>;
+        return <p>FilterString Component</p>;
     }
 }
 
