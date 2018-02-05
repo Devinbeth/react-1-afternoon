@@ -12,10 +12,9 @@ class EvenAndOdd extends Component{
 
     click(){
         if(this.state.userInput){
-            let arr = this.state.userInput.split(',').map((val) => Number(val));
             this.setState({
-                evenArray: arr.filter((val) => val % 2 === 0),
-                oddArray: arr.filter((val) => val % 2 > 0),
+                evenArray: this.state.userInput.split(',').map((val) => Number(val)).filter((val) => val % 2 === 0),
+                oddArray: this.state.userInput.split(',').map((val) => Number(val)).filter((val) => val % 2 > 0),
                 userInput: ""
             });
         }
